@@ -68,6 +68,8 @@
   }
 
   .about-text {
-    padding-top: 20px;
+    order: -1;
+    padding-top: 0; /* remove the big gap */
+    align-items: center;
   }
 }

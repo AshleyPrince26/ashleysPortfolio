@@ -202,9 +202,12 @@ body {
 }
 
 /* makes the boxes change size */
-.element .square {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* This keeps it square! */
+.elements .square {
+  aspect-ratio: 1 / 1; /* stays perfectly square */
+  width: 100%; /* scales inside the link */
+  max-width: 400px; /* prevents stretching */
+  margin: 0 auto; /* centers the square */
+
   border-radius: 8px;
   border: 3px solid;
   transition: 0.3s ease;
@@ -213,15 +216,10 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 15px; /* Space inside so text doesn't hit the border */
+  padding: 15px;
 
-  /* Typography fixes */
   font-weight: bold;
-  font-size: clamp(
-    1rem,
-    2vw,
-    1.2rem
-  ); /* This makes text slightly shrink on smaller screens so it fits */
+  font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.2;
 }
 

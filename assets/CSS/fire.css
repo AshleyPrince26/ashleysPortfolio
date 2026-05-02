@@ -1,0 +1,35 @@
+/* Fire style page*/
+
+.page-frame {
+  background-color: var(--fire-background-soft);
+}
+
+/* Make the main resume content readable */
+
+/* Center the resume inside the fire page */
+.fire-page main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* Make the resume readable and visually appealing */
+.resume-image {
+  width: 1000px;
+  max-width: 90%;
+  background-color: rgba(255, 255, 255, 0.9); /* soft readable panel */
+  border-radius: 12px;
+  border: 3px solid var(--fire-border);
+  padding: 20px;
+
+  box-shadow: 0 0 18px #ff6b6b;
+}
+
+/* Make the resume image scale nicely */
+.resume-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

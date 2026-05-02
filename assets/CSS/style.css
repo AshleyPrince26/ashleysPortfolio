@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap");
+
+/*color pallet */
+:root {
+  --air-background-soft: rgba(239, 223, 192, 0.5);
+  --fire-background-soft: rgba(180, 117, 120, 0.5);
+  --water-background-soft: rgba(152, 192, 214, 0.5);
+  --earth-background-soft: rgba(152, 170, 125, 0.5);
+
+  /* Water colors */
+  --water-background: #98c0d6;
+  --water-border: #6ba3bf;
+
+  /* Earth colors */
+  --earth-background: #98aa7d;
+  --earth-border: #6f805a;
+
+  /* Fire colors */
+  --fire-background: #b47578;
+  --fire-border: #8d4e50;
+
+  /* Air colors */
+  --air-background: #efdfc0;
+  --air-border: #d1c2a3;
+  --nomad-robe-yellow: #ffd077;
+  --nomad-robe-orange: #da7058;
+
+  /*Avatar state*/
+  --light-glow: #c5f0fe;
+  --lightish-glow: #a8d9f9;
+  --medium-glow: #87afea;
+  --darkish-glow: #87afea;
+  --darkglow: #093ea4;
+
+  /* Main colors */
+  --text-color: #3d3028;
+  --appa-background: #fdf6e2; /*#fdf6e2 vs fdfde5 */
+  --appa-border: #372d2a;
+  --appa-arrow: #917d70;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base page styles */
+body {
+  font-family: "Cinzel Decorative", Arial, sans-serif;
+  background-color: var(--appa-background); /* background */
+  color: var(--text-color); /* text */
+  border: 4px solid var(--appa-border); /* fullpage border */
+  line-height: 1.5;
+}
+
+/* --------------------------------header / nav------------------------- */
+
+.header {
+  display: flex; /* places name on left, nav on right */
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: var(--appa-arrow); /* #917b71; /* header background */
+  border-bottom: 4px solid var(--appa-border); /* Header border */
+}
+
+.AshleyPrince {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  text-shadow:
+    0 0 8px #ffffff,
+    0 0 16px var(--light-glow); /*avatar glow*/
+}
+
+/*avatar state for name*/
+.AshleyPrince:hover {
+  text-shadow:
+    0 0 14px var(--light-glow),
+    /*start a center and glow out to 14px*/ 0 0 28px var(--lightish-glow),
+    0 0 42px var(--medium-glow),
+    0 0 56px var(--darkish-glow),
+    0 0 70px var(--darkglow);
+  transform: scale(1.05);
+}
+
+/* Nav buttons */
+
+.nav a {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-left: 16px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: all 0.3s ease; /*makes transitions work*/
+}
+
+/*Water Nav*/
+.nav-water {
+  background-color: var(--water-background);
+  border: 3px solid var(--water-border);
+}
+
+/*water hover effects*/
+.nav-water:hover {
+  transform: scale(1.05); /*zoom */
+  animation: waterRipple 0.6s ease-out; /*play effect keyframe below*/
+}
+
+/* Earth nav*/
+.nav-earth {
+  background-color: var(--earth-background);
+  border: 3px solid var(--earth-border);
+}
+
+/* earth nav hover effect */
+.nav-earth:hover {
+  box-shadow: 0 4px 0 var(--earth-border); /*green underline*/
+  animation: earthShake 0.25s linear; /*play effect keyframe below*/
+}
+
+/* Fire nav*/
+.nav-fire {
+  background-color: var(--fire-background);
+  border: 3px solid var(--fire-border);
+}
+
+/* fire nav hover effect*/
+.nav-fire:hover {
+  box-shadow: 0 0 15px #ff6b6b; /* glow */
+  transform: scale(1.08); /* zoom */
+  animation: fireFlicker 0.15s infinite alternate; /*play effect keyframe below*/
+}
+
+/* air nav*/
+.nav-air {
+  background-color: var(--air-background);
+  border: 3px solid var(--air-border);
+}
+
+/* Air nav hover effect*/
+.nav-air:hover {
+  transform: translateY(-4px); /* float */
+  animation: airDrift 0.8s ease-out; /*play effect keyframe below*/
+}
+
+/*---------------------------------------end of nav stuff -------------------------*/
+
+/* Main content */
+.main-content {
+  padding: 40px;
+}
+
+/* -----------------------Hero section------------------------------------*/
+
+/*Hero section box*/
+.hero {
+  display: flex; /* image left, text right */
+  gap: 40px; /* space between columns */
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+/* image box with a placeholder */
+.hero-image {
+  width: 350px;
+  height: 350px;
+  background-color: #e0d7c8; /*placeholder*/
+  border-radius: 10px;
+  border: 2px solid var(--appa-border);
+}
+
+/* Hero image - image of me */
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps face from stretching */
+  border-radius: 10px;
+}
+
+/* Hero text box - Text block next to image */
+.hero-text-box {
+  max-width: 600px;
+  /*font-family: "Simonetta", Arial, sans-serif;*/
+}
+
+.hero-text-box .heroText {
+  font-family: "Simonetta", Arial, sans-serif;
+  font-size: 20px;
+}
+
+/* Choose your adventure boxes */
+.elements {
+  display: flex; /* puts the boxes in a row */
+  gap: 20px; /* space between boxes */
+  margin-top: 40px;
+}
+
+/* makes the boxes change size */
+.square {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* This keeps it square! */
+  border-radius: 8px;
+  border: 3px solid;
+  transition: 0.3s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px; /* Space inside so text doesn't hit the border */
+
+  /* Typography fixes */
+  font-weight: bold;
+  font-size: clamp(
+    1rem,
+    2vw,
+    1.2rem
+  ); /* This makes text slightly shrink on smaller screens so it fits */
+  line-height: 1.2;
+}
+
+.square-link {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  min-width: 0;
+}
+
+/* -------------------------------Box effects + keyframes--------------------------------*/
+
+/* Water */
+.square.water {
+  background-color: var(--water-background);
+  border-color: var(--water-border);
+}
+
+.square.water:hover {
+  box-shadow: 0 0 15px var(--water-border); /*Glow*/
+  transform: scale(1.05); /*zoom*/
+  animation: waterRipple 0.6s ease-out; /*play*/
+}
+
+@keyframes waterRipple {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Earth */
+.square.earth {
+  background-color: var(--earth-background);
+  border-color: var(--earth-border);
+}
+
+.square.earth:hover {
+  box-shadow: 0 4px 0 var(--earth-border);
+  animation: earthShake 0.25s linear;
+}
+
+@keyframes earthShake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* fire */
+.square.fire {
+  background-color: var(--fire-background);
+  border-color: var(--fire-border);
+}
+
+.square.fire:hover {
+  box-shadow: 0 0 18px #ff6b6b;
+  transform: scale(1.08);
+  animation: fireFlicker 0.15s infinite alternate;
+}
+
+@keyframes fireFlicker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.85;
+  }
+}
+
+/* Aair*/
+.square.air {
+  background-color: var(--air-background);
+  border-color: var(--air-border);
+}
+
+.square.air:hover {
+  transform: translateY(-6px);
+  opacity: 0.9;
+  box-shadow: 0 0 12px #ffffff;
+  animation: airDrift 0.8s ease-out;
+}
+
+@keyframes airDrift {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+/*------------------------------------keyframes done ---------------------------------------------*/
+.page-frame {
+  min-height: 99vh; /* full screen height */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--appa-background);
+  border: 2px solid var(--appa-border); /* your existing border */
+  box-sizing: border-box; /* ensures border is included */
+}
+
+/* Center main content and footer stays at bottom */
+.contact-main {
+  flex: 1; /* fills remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Footer locked to bottom inside the border */
+footer {
+  margin-top: auto; /* pushes footer to bottom */
+  text-align: center;
+  padding: 20px;
+  color: var(--appa-arrow);
+}
+
+/* MOBILE RESPONSIVE — hides nav on small screens */
+@media (max-width: 768px) {
+  .elements {
+    flex-direction: column; /* Stacks them vertically */
+    align-items: center; /* Centers the stack */
+  }
+
+  .square-link {
+    width: 80%; /* Makes them wider on mobile so they look like buttons */
+    max-width: 300px; /* But not TOO wide */
+    flex: none; /* Stops them from trying to fill the whole screen height */
+  }
+}

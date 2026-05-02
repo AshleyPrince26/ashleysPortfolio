@@ -1,0 +1,22 @@
+Notes for HTML CSS and JS
+HTML
+
+HTML Structure Basics
+<!doctype html>  - Tells the browser “this is an HTML5 document.”
+<html lang="en">  - Wraps the entire page. The lang attribute helps accessibility tools know the language.
+<head>  - Contains information about the page, not visible content. Examples: title, metadata, CSS links.
+<body>  - Contains everything the user sees.
+
+Elements  are the building blocks of HTML. They contain an opening <tag> and closing </tag>
+Examples: <header>, <nav>, <main>, <footer>, <p>, <a>, etc.
+
+Classes
+A class is a label you attach to an element so CSS can style it. They are used because you can reuse them anywhere they keep your CSS organized, and they let you style specific things without affecting everything.
+CSS
+How to Organize Your CSS 
+A clean CSS file usually follows this order:
+Reset / Normalize  - Removes browser default styles so you start clean.
+Base Styles  - Body, headings, paragraphs, links.
+Layout  - header, nav, main, footer, grid/flex containers.
+Components  - Buttons, cards, hero sections, forms.
+Utilities  - Small helpers like .text-center or .hidden.

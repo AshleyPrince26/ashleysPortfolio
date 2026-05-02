@@ -1,0 +1,61 @@
+/* water page*/
+
+.water-page {
+  background-color: var(--water-background-soft);
+  min-height: 90.5vh;
+}
+
+/* Full page background */
+.water-about {
+  min-height: 100vh;
+  padding: 60px 40px;
+}
+
+/* Two-column layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left column: stacked images */
+.about-images {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-images img {
+  width: 400px;
+  border-radius: 12px;
+  border: 3px solid var(--water-border);
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Right column: text */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  padding-top: 100px;
+  font-family: "Simonetta", serif;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+.about-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: var(--water-border);
+  font-family: "Cinzel Decorative", serif;
+}
+
+.about-text p {
+  font-family: "Simonetta", serif;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: var(--text-color);
+}

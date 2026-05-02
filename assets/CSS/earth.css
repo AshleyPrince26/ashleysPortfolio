@@ -108,3 +108,16 @@ html {
   line-height: 1.6;
   font-family: "Simonetta", Arial, sans-serif;
 }
+.project-text .project-link {
+  font-weight: bold;
+}
+
+.project-text a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.project-text a:hover {
+  color: var(--darkglow);
+  text-shadow: 0 0 6px var(--medium-glow);
+}

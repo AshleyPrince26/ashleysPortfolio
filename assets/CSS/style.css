@@ -204,8 +204,8 @@ body {
 /* makes the boxes change size */
 .elements .square {
   aspect-ratio: 1 / 1; /* stays perfectly square */
-  width: 100%; /* scales inside the link */
-  max-width: 400px; /* prevents stretching */
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto; /* centers the square */
 
   border-radius: 8px;
@@ -355,16 +355,15 @@ footer {
   color: var(--appa-arrow);
 }
 
-/* MOBILE RESPONSIVE — hides nav on small screens */
 @media (max-width: 768px) {
   .elements {
-    flex-direction: column; /* Stacks them vertically */
-    align-items: center; /* Centers the stack */
+    flex-direction: column; /* Stacks vertically */
+    align-items: center; /* Centers stack */
   }
 
   .square-link {
-    width: 80%; /* Makes them wider on mobile so they look like buttons */
-    max-width: 300px; /* But not TOO wide */
-    flex: none; /* Stops them from trying to fill the whole screen height */
+    width: 80%;
+    max-width: 300px;
+    flex: none;
   }
 }

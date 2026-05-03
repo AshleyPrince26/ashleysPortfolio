@@ -41,7 +41,6 @@ html {
   animation: earthShake 0.25s linear;
 }
 
-/* PROJECT SECTION */
 .project-section {
   max-width: 1000px;
   margin: 80px auto;
@@ -83,7 +82,7 @@ html {
   flex-direction: row-reverse;
 }
 
-/* Image styling */
+/* image styling */
 .project-image {
   width: 300px;
   height: auto;
@@ -101,7 +100,7 @@ html {
   object-fit: cover;
 }
 
-/* Text styling */
+/* text styling */
 .project-text {
   flex: 1;
   font-size: 1.1rem;
